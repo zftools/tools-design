@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发工具网站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>开发工具网站</h1>
+        <p>提供各种开发常用的工具，简单高效</p>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#home" class="active">首页</a></li>
+            <li><a href="encryption.html">加密工具</a></li>
+            <li><a href="#time">时间转换</a></li>
+            <li><a href="#random">随机生成</a></li>
+            <li><a href="#base64">Base64转换</a></li>
+            <li><a href="#image">图片转换</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="tab-content active">
+            <div class="hero">
+                <h2>欢迎使用开发工具网站</h2>
+                <p>选择上方菜单进入不同的工具页面，开始您的开发之旅。</p>
+                <div class="feature-cards">
+                    <div class="card">
+                        <h3>加密工具</h3>
+                        <p>支持多种加密算法，保护您的代码安全。</p>
+                    </div>
+                    <div class="card">
+                        <h3>时间转换</h3>
+                        <p>轻松转换时间戳和日期格式。</p>
+                    </div>
+                    <div class="card">
+                        <h3>随机生成</h3>
+                        <p>生成随机字符串、密码等。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="encryption" class="tab-content">
+            <h2>加密工具</h2>
+            <div class="tool-interface">
+                <div class="input-area">
+                    <label for="encrypt-input">输入文本：</label>
+                    <textarea id="encrypt-input" placeholder="输入要加密的文本"></textarea>
+                    <select id="encrypt-type">
+                        <option value="md5">MD5</option>
+                        <option value="sha256">SHA-256</option>
+                    </select>
+                    <button class="btn-primary">加密</button>
+                </div>
+                <div class="output-area">
+                    <label for="encrypt-output">输出结果：</label>
+                    <textarea id="encrypt-output" readonly></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section id="time" class="tab-content">
+            <h2>时间转换</h2>
+            <div class="tool-interface">
+                <div class="input-area">
+                    <label for="time-input">输入时间：</label>
+                    <input type="text" id="time-input" placeholder="例如：2023-01-01 或 1672531200">
+                    <select id="time-type">
+                        <option value="timestamp">时间戳转日期</option>
+                        <option value="date">日期转时间戳</option>
+                    </select>
+                    <button class="btn-primary">转换</button>
+                </div>
+                <div class="output-area">
+                    <label for="time-output">输出结果：</label>
+                    <input type="text" id="time-output" readonly>
+                </div>
+            </div>
+        </section>
+
+        <section id="random" class="tab-content">
+            <h2>随机生成</h2>
+            <div class="tool-interface">
+                <div class="input-area">
+                    <label for="random-length">长度：</label>
+                    <input type="number" id="random-length" value="12">
+                    <select id="random-type">
+                        <option value="string">随机字符串</option>
+                        <option value="password">随机密码</option>
+                    </select>
+                    <button class="btn-primary">生成</button>
+                </div>
+                <div class="output-area">
+                    <label for="random-output">输出结果：</label>
+                    <input type="text" id="random-output" readonly>
+                </div>
+            </div>
+        </section>
+
+        <section id="base64" class="tab-content">
+            <h2>Base64转换</h2>
+            <div class="tool-interface">
+                <div class="input-area">
+                    <label for="base64-input">输入文本：</label>
+                    <textarea id="base64-input" placeholder="输入文本"></textarea>
+                    <div class="button-group">
+                        <button class="btn-secondary">编码</button>
+                        <button class="btn-secondary">解码</button>
+                    </div>
+                </div>
+                <div class="output-area">
+                    <label for="base64-output">输出结果：</label>
+                    <textarea id="base64-output" readonly></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section id="image" class="tab-content">
+            <h2>图片转换</h2>
+            <div class="tool-interface">
+                <div class="input-area">
+                    <label for="image-input">选择图片：</label>
+                    <input type="file" id="image-input" accept="image/*">
+                    <select id="image-format">
+                        <option value="jpg">转换为JPG</option>
+                        <option value="png">转换为PNG</option>
+                    </select>
+                    <button class="btn-primary">转换</button>
+                </div>
+                <div class="output-area">
+                    <label>输出图片：</label>
+                    <div class="image-preview">
+                        <img id="image-output" src="" alt="转换后的图片" style="display:none;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 开发工具网站 | 设计精美，功能强大</p>
+    </footer>
+</body>
+</html>

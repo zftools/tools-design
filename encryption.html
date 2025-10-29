@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加密工具 - 开发工具网站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>加密工具</h1>
+        <p>支持多种加密算法，保护您的代码安全</p>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">返回首页</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="tool-page">
+            <div class="tool-header">
+                <h2>加密工具</h2>
+                <p>选择加密算法，对您的文本进行加密处理。</p>
+            </div>
+
+            <div class="tool-interface">
+                <div class="input-area">
+                    <label for="encrypt-input">输入文本：</label>
+                    <textarea id="encrypt-input" placeholder="输入要加密的文本" rows="6"></textarea>
+
+                    <div class="options">
+                        <label for="encrypt-type">选择算法：</label>
+                        <select id="encrypt-type">
+                            <option value="md5">MD5</option>
+                            <option value="sha1">SHA-1</option>
+                            <option value="sha256">SHA-256</option>
+                            <option value="sha512">SHA-512</option>
+                        </select>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="btn-primary" id="encrypt-btn">加密</button>
+                        <button class="btn-secondary" id="clear-btn">清空</button>
+                    </div>
+                </div>
+
+                <div class="output-area">
+                    <label for="encrypt-output">加密结果：</label>
+                    <textarea id="encrypt-output" readonly rows="6" placeholder="加密结果将显示在这里"></textarea>
+
+                    <div class="output-actions">
+                        <button class="btn-secondary" id="copy-btn">复制结果</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-info">
+                <h3>支持的加密算法</h3>
+                <ul>
+                    <li><strong>MD5：</strong>128位哈希值，常用于校验文件完整性</li>
+                    <li><strong>SHA-1：</strong>160位哈希值，已被认为不安全</li>
+                    <li><strong>SHA-256：</strong>256位哈希值，广泛用于数字签名</li>
+                    <li><strong>SHA-512：</strong>512位哈希值，提供更高安全性</li>
+                </ul>
+                <p class="note">注意：哈希加密是单向的，无法解密。请妥善保管原始数据。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 开发工具网站 | <a href="index.html">返回首页</a></p>
+    </footer>
+</body>
+</html>
